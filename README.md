@@ -2,22 +2,35 @@
 testRepo by anshul
 
 TERRAFORM
+
 terraform plan = check kya kya add ho ge
 
 terraform init = download plugin 
+
 terraform providers = show all providers
+
 terraform apply = finally step
+
 terraform destroy = delete resources
+
 terraform validate = check your code syntax
+
 terraform fmt = delete all unusefully spaces 
+
 terraform taint aws_security.group.allow_tls = mark this security gp when u see apply cmd created new one
+
 terraform graph | dot Tpdf > file.txt = created you full terraform on graph save on this file
+
 terraform workspace list = list all workspace
+
 terraform workspace new dev = created workspace dev
+
 terraform workspace show = current workspace show
+
 terraform workspace select dev = go in this workspace
 
 github_repository.terra-repo.url = it show this repo url any output give you
+
 terraform console = enter var.username it's give you value any variable you see 
 
 
@@ -26,6 +39,7 @@ terraform console = enter var.username it's give you value any variable you see
 output "hello1" {
     value = "Hello world"
 }
+
 terraform plan = this run terraform file 
 
 INPUT FROM USER
