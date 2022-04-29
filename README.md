@@ -34,7 +34,7 @@ github_repository.terra-repo.url = it show this repo url any output give you
 terraform console = enter var.username it's give you value any variable you see 
 
 
-
+#OUTPUT
 
 output "hello1" {
     value = "Hello world"
@@ -42,58 +42,67 @@ output "hello1" {
 
 terraform plan = this run terraform file 
 
-INPUT FROM USER
+#INPUT FROM USER
+
 variable username {}
 output printname {
     value = "Hello ${var.username}"
 }
 
-PRINT OUTPUT WITH VARIABLE
+#PRINT OUTPUT WITH VARIABLE
+
 terraform plan -var "username=Anshul" 
 
-DEFAULT VALUE OF VARIABLE
+#DEFAULT VALUE OF VARIABLE
+
 variable username {
     default = "world"
 }
  
-TYPE OF VARIABLE
-string
-number
-bool
-list
-set
-map
-Object
-tuple
+#TYPE OF VARIABLE
+string,
+number,
+bool,
+list,
+set,
+map,
+Object,
+tuple.
 
 variable age {
    type = number
 }
 
-LIST
+#LIST
+
 variable users {
     type= list
 }
+
 output printfirst {
    value = "first list name is ${var.user[0]}"
 }
 
-JOIN FUNCTION 
+#JOIN FUNCTION
+
 output print {
     value = "${join("-",var.users)}"
 }
+
 #sepreated your value by -
 
-UPPER CASE FUNCTION
+#UPPER CASE FUNCTION
+
 output printupper {
    value = "${upper(var.user[0])}"
 }
 
-FUNCTION SAME LIKE UPPER 
-lower
+#FUNCTION SAME LIKE UPPER 
+lower,
 title
 
-MAP VARIABLE
+#MAP VARIABLE
+
 variable "usersage" {
     type = map
     default = {
@@ -107,43 +116,61 @@ output "userage"{
    value = "my name is Gaurav and age  is   "${lookup(var.usersage, "gaurav")}"
 }
 
-TFVARs
+#TFVARS
+
 touch terraform.tfvars
+
 age= 25
+
 username="Anshul"
 
+:wq
+
 touch file.tr
+
 variable age {
    type = number
 }
+
 variable "username"{
    type=string
 }
+
 # automatically take value from this file
 
 terraform plan -var-file=development.tfvars
+
 #here you set variable file name
 
 SET ENV VARIABLE
+
 terminal
+
 export TF_VAR_username=Anshul
+
 In file.tr
+
 output printname {
     value = "Hello, ${var.username}"
 }
 
-PROVIDERS
+#PROVIDERS
+
 terraform providers = list all providers
 
 In file.tr created provide
+
 provider "aws" {
     token="hsjsjdjdjjsjsu5677"
 }
+
 #token you find from AWS website or GitHub or etc
 
-PLUGIN
+#PLUGIN
+
 terraform init 
 # it  add plugin automatically 
 
 APPLY terraform
+
 terraform apply
