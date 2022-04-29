@@ -2,7 +2,8 @@
 testRepo by anshul
 
 TERRAFORM
-terraform plan = check kya kya add ho ge,
+terraform plan = check kya kya add ho ge
+
 terraform init = download plugin 
 terraform providers = show all providers
 terraform apply = finally step
