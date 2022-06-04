@@ -146,6 +146,13 @@ SET ENV VARIABLE
 
 terminal
 
+# terrform local vaiabl
+locals {
+  staging_env = "staging"
+}
+
+"${local.staging_env}"          # how use local vaiable
+
 export TF_VAR_username=Anshul
 
 In file.tr
